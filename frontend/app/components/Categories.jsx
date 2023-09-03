@@ -1,8 +1,3 @@
-import Image from "next/image";
-import styles from "./page.module.scss";
-
-// Edit this out later
-
 const getCategories = async () => {
 	const data = await fetch(`http://localhost:1337/categories`);
 	const categories = await data.json();
@@ -11,6 +6,8 @@ const getCategories = async () => {
 
 getCategories();
 
-export default function Home() {
-	return <main className={styles.main}></main>;
-}
+const Categories = () => {
+	return <div>Categories</div>;
+};
+
+export default Categories;
