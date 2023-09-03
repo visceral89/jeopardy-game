@@ -1,13 +1,11 @@
-const getCategories = async () => {
-	const data = await fetch(`http://localhost:1337/categories`);
-	const categories = await data.json();
-	console.log(categories);
-};
+const Categories = ({ id, title }) => {
+	// Code to handle getting the cards corresponding to this categorys ID!
 
-getCategories();
-
-const Categories = () => {
-	return <div>Categories</div>;
+	return (
+		<div>
+			<h1>{title}</h1>
+		</div>
+	);
 };
 
 export default Categories;
