@@ -1,4 +1,5 @@
 import Card from "./Card";
+import styles from "@/app/categories.module.scss";
 
 const Categories = ({ categoryId, title, allCards }) => {
 	// Code to handle getting the cards corresponding to this categorys ID!
@@ -7,9 +8,12 @@ const Categories = ({ categoryId, title, allCards }) => {
 	const cards = allCards.filter((card) => card.id === categoryId);
 
 	return (
-		<div>
+		<div className={styles.category}>
 			<h1>{title}</h1>
-			<div>{cards && cards.map((card) => <Card key={card.id} />)}</div>
+
+			{cards.map((card) => (
+				<Card key={card.id} points={card.attributes.points} />
+			))}
 		</div>
 	);
 };
