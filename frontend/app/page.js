@@ -13,8 +13,12 @@ export default function Home() {
 
 	useEffect(() => {
 		const fetchData = async () => {
-			const catData = await fetch(`http://localhost:1337/api/categories`);
-			const cardData = await fetch(`http://localhost:1337/api/cards/`);
+			const catData = await fetch(
+				`http://localhost:1337/api/categories?populate=*`
+			);
+			const cardData = await fetch(
+				`http://localhost:1337/api/cards?populate=*`
+			);
 
 			const categories = await catData.json();
 			const cards = await cardData.json();
@@ -23,6 +27,8 @@ export default function Home() {
 		};
 
 		fetchData();
+		console.log(cards);
+		console.log(categories);
 	}, []);
 
 	return (
