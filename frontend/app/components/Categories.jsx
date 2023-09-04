@@ -1,7 +1,9 @@
 const Categories = ({ id, title, allCards }) => {
 	// Code to handle getting the cards corresponding to this categorys ID!
 	const catId = id;
-	const cards = allCards.filter((card) => card.catId === id);
+	const cards = allCards.filter((card) => card.id === catId);
+	console.log("All cards: " + allCards);
+	console.log("Filtered cards: " + cards);
 
 	return (
 		<div>
