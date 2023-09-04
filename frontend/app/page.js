@@ -30,7 +30,7 @@ export default function Home() {
 			{categories.map((category) => (
 				<Categories
 					key={category.id}
-					id={category.id}
+					categoryId={category.id}
 					title={category.attributes.title}
 					allCards={cards}
 				/>

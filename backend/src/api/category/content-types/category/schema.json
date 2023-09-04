@@ -4,7 +4,8 @@
   "info": {
     "singularName": "category",
     "pluralName": "categories",
-    "displayName": "Category"
+    "displayName": "Category",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -17,8 +18,7 @@
     "cards": {
       "type": "relation",
       "relation": "oneToMany",
-      "target": "api::card.card",
-      "mappedBy": "category"
+      "target": "api::card.card"
     }
   }
 }

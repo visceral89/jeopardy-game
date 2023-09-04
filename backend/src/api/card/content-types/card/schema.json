@@ -25,12 +25,6 @@
     },
     "points": {
       "type": "string"
-    },
-    "category": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::category.category",
-      "inversedBy": "cards"
     }
   }
 }

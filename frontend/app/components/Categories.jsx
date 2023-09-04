@@ -1,9 +1,10 @@
-const Categories = ({ id, title, allCards }) => {
+import Card from "./Card";
+
+const Categories = ({ categoryId, title, allCards }) => {
 	// Code to handle getting the cards corresponding to this categorys ID!
-	const catId = id;
-	const cards = allCards.filter((card) => card.id === catId);
-	console.log("All cards: " + allCards);
-	console.log("Filtered cards: " + cards);
+	console.log("All cards:", JSON.stringify(allCards, null, 2));
+	console.log("Current categoryId:", categoryId);
+	const cards = allCards.filter((card) => card.id === categoryId);
 
 	return (
 		<div>
