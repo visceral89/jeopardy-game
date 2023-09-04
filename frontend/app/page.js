@@ -9,15 +9,20 @@ import Categories from "./components/Categories";
 
 export default function Home() {
 	const [categories, setCategories] = useState([]);
+	const [cards, setCards] = useState([]);
 
 	useEffect(() => {
-		const getCategories = async () => {
-			const data = await fetch(`http://localhost:1337/api/categories`);
-			const categories = await data.json();
+		const fetchData = async () => {
+			const catData = await fetch(`http://localhost:1337/api/categories`);
+			const cardData = await fetch(`http://localhost:1337/api/cards/`);
+
+			const categories = await catData.json();
+			const cards = await cardData.json();
 			setCategories(categories.data);
+			setCards(cards.data);
 		};
 
-		getCategories();
+		fetchData();
 	}, []);
 
 	return (
@@ -27,6 +32,7 @@ export default function Home() {
 					key={category.id}
 					id={category.id}
 					title={category.attributes.title}
+					allCards={cards}
 				/>
 			))}
 		</main>
