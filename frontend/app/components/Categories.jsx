@@ -17,7 +17,7 @@ const Categories = ({ categoryId, title, allCards }) => {
 			<h1>{title}</h1>
 
 			{sortedCards.map((card) => (
-				<Card key={card.id} points={card.attributes.points} />
+				<Card key={card.id} id={card.id} points={card.attributes.points} />
 			))}
 		</div>
 	);

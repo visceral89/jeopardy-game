@@ -16,3 +16,28 @@
 	background: $purp-color-lighter;
 	cursor: pointer;
 }
+
+.modal {
+	z-index: 999;
+	top: 0;
+	left: 0;
+	background-color: $purp-color-lighter;
+	width: 700px;
+	height: 600px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.background {
+	position: fixed;
+	z-index: 998;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	backdrop-filter: blur(5px);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
