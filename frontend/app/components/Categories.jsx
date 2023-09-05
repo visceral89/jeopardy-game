@@ -8,12 +8,15 @@ const Categories = ({ categoryId, title, allCards }) => {
 	const filteredCards = allCards.filter(
 		(card) => card.attributes.category.data.id === categoryId
 	);
+	const sortedCards = filteredCards.sort(
+		(a, b) => a.attributes.points - b.attributes.points
+	);
 
 	return (
 		<div className={styles.category}>
 			<h1>{title}</h1>
 
-			{filteredCards.map((card) => (
+			{sortedCards.map((card) => (
 				<Card key={card.id} points={card.attributes.points} />
 			))}
 		</div>

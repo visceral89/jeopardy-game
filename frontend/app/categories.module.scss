@@ -5,6 +5,13 @@
 	align-items: center;
 	justify-content: flex-start;
 	flex: 1;
-	gap: 2em;
-}
+	gap: 1em;
+	padding: 1rem;
 
+	// Background
+	background: linear-gradient(
+		0deg,
+		rgba(40, 40, 40, 1) 0%,
+		rgba(0, 0, 0, 1) 50%
+	);
+}
