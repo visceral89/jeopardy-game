@@ -1,20 +1,18 @@
+@import "variables";
+
 .card {
 	display: flex;
 	flex: 1;
 	justify-content: center;
 	align-items: center;
-	background: rgba(0, 0, 0, 0);
-	width: 100%;
+	background: $purp-color-light;
+	width: 75%;
 	height: 100%;
-	border: 1px solid rgba(100, 100, 100, 100);
 	border-radius: 1rem;
+	transition: background-color 350ms ease-in-out;
 }
 
 .card:hover {
-	border: 1px solid rgb(180, 180, 180);
-	background: linear-gradient(
-		0deg,
-		rgba(40, 40, 40, 0.5) 0%,
-		rgba(0, 0, 0, 0.5) 100%
-	);
+	background: $purp-color-lighter;
+	cursor: pointer;
 }

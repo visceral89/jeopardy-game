@@ -1,5 +1,6 @@
+@import "variables";
+
 .category {
-	background-color: bisque;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -9,9 +10,5 @@
 	padding: 1rem;
 
 	// Background
-	background: linear-gradient(
-		0deg,
-		rgba(40, 40, 40, 1) 0%,
-		rgba(0, 0, 0, 1) 50%
-	);
+	background-color: $purp-color-dark;
 }
