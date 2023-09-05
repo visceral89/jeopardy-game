@@ -22,11 +22,14 @@
 	top: 0;
 	left: 0;
 	background-color: $purp-color-lighter;
-	width: 700px;
-	height: 600px;
+	width: 800px;
+	height: 700px;
 	display: flex;
-	justify-content: center;
+	flex-direction: column;
+	justify-content: space-between;
 	align-items: center;
+	border-radius: 1em;
+	padding: 1rem;
 }
 
 .background {
@@ -40,4 +43,25 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+}
+
+.close {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	align-items: center;
+	width: 100%;
+	fill: $white-color;
+}
+.answers {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.iconClose,
+.iconFalse,
+.iconRight {
+	fill: $white-color;
 }

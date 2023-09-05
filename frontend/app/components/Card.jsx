@@ -11,7 +11,7 @@ const card = ({ id, points }) => {
 
 	return (
 		<div className={styles.card} onClick={toggleModal}>
-			{isModalOpen && <Modal id={id} />}
+			{isModalOpen && <Modal id={id} toggleModal={toggleModal} />}
 			<p>{points}</p>
 		</div>
 	);
