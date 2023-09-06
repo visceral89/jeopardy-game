@@ -22,8 +22,8 @@
 	top: 0;
 	left: 0;
 	background-color: $purp-color-lighter;
-	width: 800px;
-	height: 700px;
+	width: 900px;
+	height: 800px;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -54,10 +54,34 @@
 	fill: $white-color;
 }
 .answers {
-	width: 100%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	:hover.wrong {
+		background-color: $red-color-alert;
+	}
+	:hover.right {
+		background-color: $green-color-accept;
+	}
+}
+
+.right,
+.wrong {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	padding: 1rem 4rem;
+	background-color: $purp-color-light;
+}
+
+.right {
+	border-top-right-radius: 20px;
+	border-bottom-right-radius: 20px;
+}
+.wrong {
+	border-top-left-radius: 20px;
+	border-bottom-left-radius: 20px;
 }
 
 .iconClose,
