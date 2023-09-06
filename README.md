@@ -28,7 +28,7 @@ Welcome to our Jeopardy game! This project is a fun, interactive Jeopardy-style 
 1. **Clone the repository**
 
     \`\`\`bash
-    git clone https://your-repo-link.git
+    git clone https://github.com/Visceral89/jeopardy-game.git
     \`\`\`
 
 2. **Install Dependencies**
