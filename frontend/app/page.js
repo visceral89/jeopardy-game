@@ -13,9 +13,10 @@ export default function Home() {
 
 	return (
 		<main className={styles.main}>
-			{categories.map((category) => (
-				<Categories key={category.id} />
-			))}
+			{categories &&
+				categories.map((category) => (
+					<Categories key={category.id} category={category} /> // Note that I'm passing the category object as a prop here
+				))}
 		</main>
 	);
 }
