@@ -8,18 +8,26 @@ export const CardProvider = ({ children }) => {
 	useEffect(() => {
 		const fetchData = async () => {
 			try {
-				const response = await fetch(
-					"http://localhost:1337/api/cards?populate=*"
-				);
+				const [cardsResponse, categoriesResponse] = await Promise.all([
+					fetch("http://localhost:1337/api/cards?populate=*"),
+					fetch("http://localhost:1337/api/categories/"),
+				]);
+
+				const [categoriesData, cardsData] = await Promise.all([
+					categoriesResponse.json(),
+					cardsResponse.json(),
+				]);
+
+				setData({ categories: categoriesData, cards: cardsData });
 			} catch (error) {
 				console.error("failed to fetch Data", error);
 			}
 		};
-	});
+
+		fetchData();
+	}, []);
 
 	return (
-		<CardContext.Provider value={{ data, setData }}>
-			{children}
-		</CardContext.Provider>
+		<CardContext.Provider value={{ data }}>{children}</CardContext.Provider>
 	);
 };
