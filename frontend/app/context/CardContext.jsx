@@ -9,8 +9,8 @@ export const CardProvider = ({ children }) => {
 		const fetchData = async () => {
 			try {
 				const [cardsResponse, categoriesResponse] = await Promise.all([
-					fetch("http://localhost:1337/api/cards?populate=*"),
-					fetch("http://localhost:1337/api/categories/"),
+					fetch(process.env.NEXT_PUBLIC_CARDS_URL + "?populate=*"),
+					fetch(process.env.NEXT_PUBLIC_CATEGORIES_URL),
 				]);
 
 				const [categoriesData, cardsData] = await Promise.all([
